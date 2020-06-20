@@ -60,12 +60,13 @@ class Entry {
     if (toHex(v[3])[2] === 1) {
       let loop = getInterval(v[2]);
       if (loop) {
-        if (loop.start && loop.end) { // custom values available.
+        if (loop.start && loop.end) {
+          // custom values available.
           this.updated = true;
           v[0] = loop.start;
           v[1] = loop.end - loop.start;
-        }
-        else { // custom values missing: use entire track length.
+        } else {
+          // custom values missing: use entire track length.
           v[0] = 0;
           let filename = `./ed${v[2]}.ogg`;
           let metadata = await mm.parseFile(filename);
@@ -98,6 +99,7 @@ class DataFile {
   constructor() {
     this.entries = [];
     this.updated = 0;
+    this.deduplicated = 0;
   }
   async parse(data) {
     for (let i = 0, entry; i < data.length; i += 16) {
@@ -108,7 +110,10 @@ class DataFile {
   }
   addEntry(line, entry) {
     if (this.entries[entry.id]) {
-      console.log(`Duplicate entry found for ${entry.id} at line ${line.toString(16)}`);
+      this.deduplicated++;
+      return console.log(
+        `Duplicate entry found for ${entry.id} at line ${line.toString(16)} (this entry will be ignored)`
+      );
     }
     this.entries[entry.id] = entry;
     if (entry.updated) {
@@ -119,16 +124,20 @@ class DataFile {
     return Buffer.from(
       Object.entries(this.entries)
         .sort()
-        .map(entry => entry[1].toBinary())
+        .map((entry) => entry[1].toBinary())
         .flat()
-      );
+    );
   }
   toString() {
     return Object.entries(this.entries)
       .sort()
-      .map(entry => entry[1].toString())
+      .map((entry) => entry[1].toString())
       .flat()
-      .concat([`\nUpdated ${this.updated} entries`])
+      .concat([
+        `\n`,
+        `Updated ${this.updated} entries.`,
+        `Skipped ${this.deduplicated} duplicates.`
+      ])
       .join(`\n`);
   }
   write() {
