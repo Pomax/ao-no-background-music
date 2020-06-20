@@ -74,6 +74,9 @@ class Entry {
       }
     }
   }
+  get id() {
+    return this.values[2];
+  }
   toString() {
     const [start, end, id, internal] = this.values;
     const f = toHex(internal);
@@ -100,19 +103,32 @@ class DataFile {
     for (let i = 0, entry; i < data.length; i += 16) {
       entry = new Entry();
       await entry.parse(data.slice(i, i + 16));
-      this.entries.push(entry);
-      if (entry.updated) {
-        this.updated++;
-      }
+      this.addEntry(i, entry);
+    }
+  }
+  addEntry(line, entry) {
+    if (this.entries[entry.id]) {
+      console.log(`Duplicate entry found for ${entry.id} at line ${line.toString(16)}`);
+    }
+    this.entries[entry.id] = entry;
+    if (entry.updated) {
+      this.updated++;
     }
   }
   toBinary() {
-    return Buffer.from(this.entries.map((v) => v.toBinary()).flat());
+    return Buffer.from(
+      Object.entries(this.entries)
+        .sort()
+        .map(entry => entry[1].toBinary())
+        .flat()
+      );
   }
   toString() {
-    return this.entries
+    return Object.entries(this.entries)
+      .sort()
+      .map(entry => entry[1].toString())
+      .flat()
       .concat([`\nUpdated ${this.updated} entries`])
-      .map((v) => v.toString())
       .join(`\n`);
   }
   write() {
