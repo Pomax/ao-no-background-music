@@ -1,0 +1,564 @@
+{
+    "description": "Timing information for the Ao no Kiseki OST bgm tracks - start/end false means the audio file should simply be marked as starting at 0 and ending at whatever is the duration of the file, counted in samples (not time)",
+    "loops": [
+        {
+            "id": 7052,
+            "standalone": true
+        },
+        {
+            "id": 7053,
+            "standalone": true
+        },
+        {
+            "id": 7101,
+            "start": 683902,
+            "end": 3797788
+        },
+        {
+            "id": 7102,
+            "start": 13278,
+            "end": 6354617
+        },
+        {
+            "id": 7105,
+            "start": 549281,
+            "end": 6206952
+        },
+        {
+            "id": 7111,
+            "start": 495598,
+            "end": 5467114
+        },
+        {
+            "id": 7113,
+            "start": 745898,
+            "end": 7493282
+        },
+        {
+            "id": 7114,
+            "start": 360000,
+            "end": 6960000
+        },
+        {
+            "id": 7116,
+            "start": 502908,
+            "end": 6512446
+        },
+        {
+            "id": 7117,
+            "start": 420247,
+            "end": 5255596
+        },
+        {
+            "id": 7120,
+            "start": 1657071,
+            "end": 6433531
+        },
+        {
+            "id": 7121,
+            "start": 17224,
+            "end": 5284052
+        },
+        {
+            "id": 7123,
+            "start": 552333,
+            "end": 7612078
+        },
+        {
+            "id": 7124,
+            "start": 11540,
+            "end": 4203748
+        },
+        {
+            "id": 7125,
+            "start": 1023132,
+            "end": 6086465
+        },
+        {
+            "id": 7126,
+            "start": 242068,
+            "end": 5211856
+        },
+        {
+            "id": 7150,
+            "start": 480053,
+            "end": 5520050
+        },
+        {
+            "id": 7151,
+            "start": 890628,
+            "end": 8728830
+        },
+        {
+            "id": 7160,
+            "start": 631423,
+            "end": 5365574
+        },
+        {
+            "id": 7161,
+            "start": 800822,
+            "end": 6371778
+        },
+        {
+            "id": 7162,
+            "start": 917216,
+            "end": 4236884
+        },
+        {
+            "id": 7200,
+            "start": 10482,
+            "end": 7333458
+        },
+        {
+            "id": 7201,
+            "start": 388518,
+            "end": 7866318
+        },
+        {
+            "id": 7202,
+            "start": 221027,
+            "end": 8179627
+        },
+        {
+            "id": 7203,
+            "start": 846245,
+            "end": 8603173
+        },
+        {
+            "id": 7204,
+            "start": 1017397,
+            "end": 8725460
+        },
+        {
+            "id": 7205,
+            "start": 782599,
+            "end": 7058080
+        },
+        {
+            "id": 7250,
+            "start": 1172423,
+            "end": 9236235
+        },
+        {
+            "id": 7251,
+            "start": 1539556,
+            "end": 11612135
+        },
+        {
+            "id": 7300,
+            "start": 688264,
+            "end": 7057174
+        },
+        {
+            "id": 7301,
+            "start": 489777,
+            "end": 6880000
+        },
+        {
+            "id": 7302,
+            "start": 988818,
+            "end": 7758685
+        },
+        {
+            "id": 7303,
+            "start": 593935,
+            "end": 9300000
+        },
+        {
+            "id": 7304,
+            "start": 700990,
+            "end": 10146676
+        },
+        {
+            "id": 7350,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7351,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7352,
+            "start": 1805358,
+            "end": 6797228
+        },
+        {
+            "id": 7353,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7354,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7356,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7405,
+            "substitute": {
+                "id": 7451,
+                "reason": "The legato synth in this track is the absolute worst and I will not suffer it."
+            },
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7408,
+            "start": 373876,
+            "end": 1988266
+        },
+        {
+            "id": 7450,
+            "start": 1092193,
+            "end": 9428983
+        },
+        {
+            "id": 7451,
+            "start": 1539770,
+            "end": 8499566
+        },
+        {
+            "id": 7452,
+            "start": 590260,
+            "end": 9806487
+        },
+        {
+            "id": 7453,
+            "start": 2632968,
+            "end": 12508097
+        },
+        {
+            "id": 7454,
+            "start": 471025,
+            "end": 5698500
+        },
+        {
+            "id": 7455,
+            "start": 490,
+            "end": 5587203
+        },
+        {
+            "id": 7458,
+            "start": 1632792,
+            "end": 12105511
+        },
+        {
+            "id": 7459,
+            "start": 1515575,
+            "end": 23546951
+        },
+        {
+            "id": 7460,
+            "standalone": true
+        },
+        {
+            "id": 7507,
+            "start": 2008623,
+            "end": 14004360
+        },
+        {
+            "id": 7510,
+            "start": 780000,
+            "end": 7210978
+        },
+        {
+            "id": 7512,
+            "start": 353467,
+            "end": 5178160
+        },
+        {
+            "id": 7513,
+            "start": 1471332,
+            "end": 6250000
+        },
+        {
+            "id": 7514,
+            "start": 1392750,
+            "end": 7723089
+        },
+        {
+            "id": 7515,
+            "start": 4169987,
+            "end": 11563618
+        },
+        {
+            "id": 7516,
+            "start": 990106,
+            "end": 5156568
+        },
+        {
+            "id": 7517,
+            "start": 550000,
+            "end": 6560697
+        },
+        {
+            "id": 7518,
+            "start": 397303,
+            "end": 4463335
+        },
+        {
+            "id": 7519,
+            "start": 258904,
+            "end": 3513984
+        },
+        {
+            "id": 7521,
+            "start": 399706,
+            "end": 4304542
+        },
+        {
+            "id": 7522,
+            "start": 339269,
+            "end": 4244306
+        },
+        {
+            "id": 7523,
+            "start": 7148454,
+            "end": 14540080
+        },
+        {
+            "id": 7524,
+            "start": 625114,
+            "end": 6196290
+        },
+        {
+            "id": 7527,
+            "start": 1404625,
+            "end": 12019210
+        },
+        {
+            "id": 7534,
+            "start": 3389,
+            "end": 5564763
+        },
+        {
+            "id": 7540,
+            "start": 1350000,
+            "end": 10557013
+        },
+        {
+            "id": 7541,
+            "start": 50376,
+            "end": 6647271
+        },
+        {
+            "id": 7542,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7543,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7544,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7550,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7551,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7552,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7553,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7554,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7555,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7556,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7560,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7561,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7562,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7563,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7564,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7565,
+            "start": 119972,
+            "end": 5040234
+        },
+        {
+            "id": 7566,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7567,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7568,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7569,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7570,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7571,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7572,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7573,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7574,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7575,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7576,
+            "start": false,
+            "end": false
+        },
+        {
+            "id": 7577,
+            "start": 483086,
+            "end": 4684697
+        },
+        {
+            "id": 7578,
+            "standalone": true
+        },
+        {
+            "id": 7579,
+            "start": 381112,
+            "end": 2787525
+        },
+        {
+            "id": 7580,
+            "start": 1200000,
+            "end": 6136678
+        },
+        {
+            "id": 7581,
+            "start": 1332185,
+            "end": 11254376
+        },
+        {
+            "id": 7582,
+            "start": 606517,
+            "end": 6366452
+        },
+        {
+            "id": 7583,
+            "start": 237621,
+            "end": 4787122
+        },
+        {
+            "id": 7584,
+            "start": 1004175,
+            "end": 4009183
+        },
+        {
+            "id": 7585,
+            "start": 368281,
+            "end": 6288617
+        },
+        {
+            "id": 7586,
+            "start": 329987,
+            "end": 5670953
+        },
+        {
+            "id": 7587,
+            "start": 1153600,
+            "end": 8503800
+        },
+        {
+            "id": 7588,
+            "start": 297770,
+            "end": 4844746
+        },
+        {
+            "id": 7589,
+            "start": 7749,
+            "end": 602545
+        },
+        {
+            "id": 7590,
+            "start": 631128,
+            "end": 5524837
+        },
+        {
+            "id": 7591,
+            "standalone": true
+        },
+        {
+            "id": 7592,
+            "start": 251098,
+            "end": 5626861
+        }
+    ]
+}
