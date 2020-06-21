@@ -2,6 +2,18 @@
 
 A script for generating the `t_bgm._dt` file that contains the loop timing information for [Ao no Kiseki](https://en.wikipedia.org/wiki/The_Legend_of_Heroes:_Ao_no_Kiseki).
 
+Current `t_bgm._dt` status: 100%, with the following md5 identities:
+
+| file name  |              md5                 |
+|------------|----------------------------------|
+| ed7052.ogg | 9b44d5415629d8645f6435b0ba7cc68d |
+| ed7053.ogg | 6cdbe3086b35f6bef722af22008e038c |
+| ed7150.ogg | 5756289c8b238c5ab6ed2765546d1f6c |
+| ed7250.ogg | 3ec63c86d3aaf57f8bda5f0e41e133c4 |
+| ed7350.ogg | c89b71573489c11051636f36cfdeb499 |
+| ed7450.ogg | 1dae406c644b18d2800c7a3e022202f4 |
+| ed7550.ogg | 8e1d779283e33d6d0a6fd0f58e799ac9 |
+
 
 ## Using the `t_bgm._dt` generator
 
@@ -29,6 +41,7 @@ There is no step 3, you now have the latest version of Node installed.
 
 ## Generation options
 
+- the original data file has duplicate entries: this generator removes those.
 - if a track should not loop according to the original data file, that entry gets skipped. You may notice that the `intervals.json` has the key:value pair `"standalone": true` for those tracks, but that's purely cosmetic.
 - if a track has a `start` or `end` value set to `false`, it will be given a start value `0` and a length value equal to the number of samples in the track.
 - if a track has a `"substitute": { id: <number> }` the normal start and end values will be ignored, and instead the start and end values for that substitute will be used instead. This is useful if there is a track that you really hate: rename that track to `originalfilename.ogg.old` and then copy-and-rename one of the other tracks that you do like and is close enough in role to the track you hated. I use this for `ed7405.ogg`, which is hot garbage because of its use of an almost pure sine wave synth used not even for bass notes, but a bass melody. It's absolutely ridiculous and whoever okayed that track should be ashamed of themselves.
