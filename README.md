@@ -76,11 +76,11 @@ If we search the `t_bgm._dt` file for that value with a hex editor (protip: Micr
 
 So, we know that:
 
-- This song should jump to sample LSB`x748F0700` = `0x00078F74` = 49,5476 (which is around 0m11)
-- The looping interval spans LSB`x98644700` = `0x00476498` = 4,678,808 samples from its starting point (ending around 1m57)
-- The file id is LSB`xEE1B0000` = `0x00001Bee` = 7150 (which we knew already)
-- The track shortcode is LSB`x9600` = `0x96` = 150 (which we also knew already)
-- The loop indicator is set to LSB`x0100` = `0x0001` = 1: this track should loop.
+- This song should jump to sample `LSBx748F0700` = `0x00078F74` = 49,5476 (which is around 0m11)
+- The looping interval spans `LSBx98644700` = `0x00476498` = 4,678,808 samples from its starting point (ending around 1m57)
+- The file id is `LSBxEE1B0000` = `0x00001Bee` = 7150 (which we knew already)
+- The track shortcode is `LSBx9600` = `0x96` = 150 (which we also knew already)
+- The loop indicator is set to `LSBx0100` = `0x0001` = 1: this track should loop.
 
 We can verify that these values are indeed what we're looking for by loading up the original `ed7150.ogg` in an audio editor and creating a loop region set to `{start, end = start + length}`: it loops perfectly.
 
@@ -91,7 +91,7 @@ Updating this file so that the background loops work for different music, and sp
 
 For my copy of the OST version of the Crossbell City theme, and the track loop points are at samples 480,199 (~0m10) and 5,520,176 (~1m55) for start and end respectively, which means the loop length is 5,520,176 - 48,0199 = 5,039,977.
 
-In hex, those start and length values are `0x000753C7` and `0x004CE769`, which means LSB`xC7530700` and LSB`x69E74C00`, so the new full entry would be:
+In hex, those start and length values are `0x000753C7` and `0x004CE769`, which means `LSBxC7530700` and `LSBx69E74C00`, so the new full entry would be:
 
 | A1 | A2 | A3 | A4 | B1 | B2 | B3 | B4 | C1 | C2 | C3 | C4 | X1 | X2 | Y1 | Y2 |
 |----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|----|
