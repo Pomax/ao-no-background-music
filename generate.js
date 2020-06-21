@@ -83,7 +83,7 @@ class Entry {
     const f = toHex(internal);
     const looping = f[2] === 1;
     if (looping) {
-      return `${id}: {${start}, ${end}}${this.updated ? ` *` : ``}`;
+      return `${id}}: {${start}, ${end}}${this.updated ? ` *` : ``}`;
     }
     return `${id}: -`;
   }
