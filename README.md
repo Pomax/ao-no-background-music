@@ -2,7 +2,7 @@
 
 A script for generating the `t_bgm._dt` file that contains the loop timing information for [Ao no Kiseki](https://en.wikipedia.org/wiki/The_Legend_of_Heroes:_Ao_no_Kiseki).
 
-Current `t_bgm._dt` status: 100%, with the following md5 identities:
+Current `t_bgm._dt` status: 100% based on OST files with the following md5 identities:
 
 | file name  |              md5                 |
 |------------|----------------------------------|
@@ -14,6 +14,7 @@ Current `t_bgm._dt` status: 100%, with the following md5 identities:
 | ed7450.ogg | 1dae406c644b18d2800c7a3e022202f4 |
 | ed7550.ogg | 8e1d779283e33d6d0a6fd0f58e799ac9 |
 
+If your files don't match those, then it's a good bet the `t_bgm._dt` in this repo won't work for you, and you're going to have to update `intervals.json` for timings that work for your files, to generate your own `t_bgm._dt`.
 
 ## Using the `t_bgm._dt` generator
 
