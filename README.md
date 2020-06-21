@@ -18,12 +18,11 @@ If your files don't match those, then it's a good bet the `t_bgm._dt` in this re
 
 ## Using the `t_bgm._dt` generator
 
-Copy your `t_bgm._dt` from the `./data/text` dir into your `./data/bgm` dir, then rename it to `data.bin`.
-Then, also put this repo's `generate.js` and `intervals.json` in the `./data/bgm` dir. Then:
-
-1. update `intervals.json` with values that work for your background music, then
-2. run `node generate.js` to get a new `t_bgm._dt` file, then
-3. copy that file back into your `./data/text` directory
+1. Copy your `t_bgm._dt` from the `./data/text` dir into your `./data/bgm` dir, then rename it to `data.bin`.
+2. Put this repo's `generate.js` and `intervals.json` in the `./data/bgm` dir, too.
+3. Update `intervals.json` with values that work for your background music, then
+4. **run `node generate.js` to get a new `t_bgm._dt` file**, then
+5. copy that file back into your `./data/text` directory.
 
 Note that this script requires Node.js, which is best installed using NVM (not the nodejs.org installer, apt, homebrew, or anything else. For Node, use the `nvm` system).
 
