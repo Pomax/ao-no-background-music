@@ -18,9 +18,11 @@ Current `t_bgm._dt` status: 100%, with the following md5 identities:
 ## Using the `t_bgm._dt` generator
 
 Copy your `t_bgm._dt` from the `./data/text` dir into your `./data/bgm` dir, then rename it to `data.bin`.
-Then, also put this repo's `generate.js` and `intervals.json` in the `./data/bgm` dir.
+Then, also put this repo's `generate.js` and `intervals.json` in the `./data/bgm` dir. Then:
 
-Simply update `intervals.json` with values that work for your background music, then run `node generate.js` to get a new `t_bgm._dt` file that you can drop in your `./data/text` directory.
+1. update `intervals.json` with values that work for your background music, then
+2. run `node generate.js` to get a new `t_bgm._dt` file, then
+3. copy that file back into your `./data/text` directory
 
 Note that this script requires Node.js, which is best installed using NVM (not the nodejs.org installer, apt, homebrew, or anything else. For Node, use the `nvm` system).
 
