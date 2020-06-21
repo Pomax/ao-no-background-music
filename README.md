@@ -89,7 +89,7 @@ We can verify that these values are indeed what we're looking for by loading up 
 
 Updating this file so that the background loops work for different music, and specifically the OST versions of each track, is mostly a matter of figuring out what makes for a good loop interval, writing down the sample numbers for the loop start and end, and then updating `t_bgm._dt` with the new `{start, length = end - start}` values.
 
-For my copy of the OST version of the Crossbell City theme, and the track loop points are at samples 480,199 (~0m10) and 5,520,176 (~1m55) for start and end respectively, which means the loop length is 5,520,176 - 48,0199 = 5,039,977.
+For my copy of the OST version of the Crossbell City theme, the track loop points are at samples 480,199 (~0m10) and 5,520,176 (~1m55) for start and end respectively, which means the loop length is 5,520,176 - 48,0199 = 5,039,977.
 
 In hex, those start and length values are `0x000753C7` and `0x004CE769`, which means `LSBxC7530700` and `LSBx69E74C00`, so the new full entry would be:
 
