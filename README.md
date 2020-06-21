@@ -76,10 +76,10 @@ If we search the `t_bgm._dt` file for that value with a hex editor (protip: Micr
 
 So, we know that:
 
-- This song should jump to sample `LSBx748F0700` = `0x00078F74` = 49,5476 (which is around 0m11)
-- The looping interval spans `LSBx98644700` = `0x00476498` = 4,678,808 samples from its starting point (ending around 1m57)
-- The file id is `LSBxEE1B0000` = `0x00001BEE` = 7150 (which we knew already)
-- The short id is `LSBx9600` = `0x96` = 150 (which we also knew already)
+- This song should jump to sample `LSBx748F0700` = `0x00078F74` = 49,5476 (which is around 0m11) when it loops.
+- The looping interval spans `LSBx98644700` = `0x00476498` = 4,678,808 samples from its starting point (ending around 1m57).
+- The file id is `LSBxEE1B0000` = `0x00001BEE` = 7150 (which we knew already).
+- The short id is `LSBx9600` = `0x96` = 150 (which we also knew already).
 - The loop indicator is set to `LSBx0100` = `0x0001` = 1: this track should loop.
 
 We can verify that these values are indeed what we're looking for by loading up the original `ed7150.ogg` in an audio editor and creating a loop region set to `{start, end = start + length}`: it loops perfectly.
