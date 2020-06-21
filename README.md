@@ -2,6 +2,38 @@
 
 A script for generating the `t_bgm._dt` file that contains the loop timing information for [Ao no Kiseki](https://en.wikipedia.org/wiki/The_Legend_of_Heroes:_Ao_no_Kiseki).
 
+
+## Using the `t_bgm._dt` generator
+
+Copy your `t_bgm._dt` from the `./data/text` dir into your `./data/bgm` dir, then rename it to `data.bin`.
+Then, also put this repo's `generate.js` and `intervals.json` in the `./data/bgm` dir.
+
+Simply update `intervals.json` with values that work for your background music, then run `node generate.js` to get a new `t_bgm._dt` file that you can drop in your `./data/text` directory.
+
+Note that this script requires Node.js, which is best installed using NVM (not the nodejs.org installer, apt, homebrew, or anything else. For Node, use the `nvm` system).
+
+### Installing Node on windows:
+
+1. Install the latest [nvm-windows](https://github.com/coreybutler/nvm-windows/releases).
+2. In a command prompt, run `nvm install latest`, then `nvm use latest`.
+
+There is no step 3, you now have the latest version of Node installed.
+
+### Installing Node on something unixy:
+
+1. [Install `nvm`](https://github.com/nvm-sh/nvm#installing-and-updating).
+2. In a terminal, run `nvm install latest`, then `nvm use latest`.
+
+There is no step 3, you now have the latest version of Node installed.
+
+
+## Generation options
+
+- if a track should not loop according to the original data file, that entry gets skipped. You may notice that the `intervals.json` has the key:value pair `"standalone": true` for those tracks, but that's purely cosmetic.
+- if a track has a `start` or `end` value set to `false`, it will be given a start value `0` and a length value equal to the number of samples in the track.
+- if a track has a `"substitute": { id: <number> }` the normal start and end values will be ignored, and instead the start and end values for that substitute will be used instead. This is useful if there is a track that you really hate: rename that track to `originalfilename.ogg.old` and then copy-and-rename one of the other tracks that you do like and is close enough in role to the track you hated. I use this for `ed7405.ogg`, which is hot garbage because of its use of an almost pure sine wave synth used not even for bass notes, but a bass melody. It's absolutely ridiculous and whoever okayed that track should be ashamed of themselves.
+
+
 ## Data format
 
 This file is a pure data file without header, representing an array of entries of the form:
@@ -16,7 +48,8 @@ This file is a pure data file without header, representing an array of entries o
 
 All values are encoded using Little Endian (Least Signficicant Byte First) ordering.
 
-## Decoding example: the original Crossbell City music
+
+### Decoding example: the original Crossbell City music
 
 This track is stored on disk as `ed7150.ogg`, and so we know its id is `7150`. Normally that'd be `0x1BEE` in hex, and more specifically `0x00001BEE` as ULONG, but this file uses Little Endian so we need to reverse the byte ordering: `0xEE1B0000`.
 
@@ -36,7 +69,8 @@ So, we know that:
 
 We can verify that these values are indeed what we're looking for by loading up the original `ed7150.ogg` in an audio editor and creating a loop region set to `{start, end = start + length}`: it loops perfectly.
 
-## Encoding example: the OST version of the Crossbell City music
+
+### Encoding example: the OST version of the Crossbell City music
 
 Updating this file so that the background loops work for different music, and specifically the OST versions of each track, is mostly a matter of figuring out what makes for a good loop interval, writing down the sample numbers for the loop start and end, and then updating `t_bgm._dt` with the new `{start, length = end - start}` values.
 
