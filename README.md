@@ -26,14 +26,14 @@ Then, also put this repo's `generate.js` and `intervals.json` in the `./data/bgm
 
 Note that this script requires Node.js, which is best installed using NVM (not the nodejs.org installer, apt, homebrew, or anything else. For Node, use the `nvm` system).
 
-### Installing Node on windows:
+#### Installing Node on windows:
 
 1. Install the latest [nvm-windows](https://github.com/coreybutler/nvm-windows/releases).
 2. In a command prompt, run `nvm install latest`, then `nvm use latest`.
 
 There is no step 3, you now have the latest version of Node installed.
 
-### Installing Node on something unixy:
+#### Installing Node on something unixy:
 
 1. [Install `nvm`](https://github.com/nvm-sh/nvm#installing-and-updating).
 2. In a terminal, run `nvm install latest`, then `nvm use latest`.
